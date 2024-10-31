@@ -21,19 +21,26 @@ const buttonVariants = tv({
 			lg: "h-10 rounded-md px-8",
 			icon: "h-9 w-9",
 		},
+		rounding: {
+			default: "",
+			full: "rounded-full"
+		}
 	},
 	defaultVariants: {
 		variant: "default",
 		size: "default",
+		rounding: "default"
 	},
 });
 
 type Variant = VariantProps<typeof buttonVariants>["variant"];
 type Size = VariantProps<typeof buttonVariants>["size"];
+type Rounding = VariantProps<typeof buttonVariants>["rounding"];
 
 type Props = ButtonPrimitive.Props & {
 	variant?: Variant;
 	size?: Size;
+	rounding?: Rounding;
 };
 
 type Events = ButtonPrimitive.Events;
